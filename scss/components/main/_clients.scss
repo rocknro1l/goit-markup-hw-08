@@ -1,0 +1,35 @@
+.clients {
+	@extend %section;
+}
+
+.clients__title {
+	@extend %title;
+}
+
+.clients__list {
+	@include flexCentered();
+	@extend %list;
+}
+
+.clients__card + .clients__card {
+	margin-left: 30px;
+}
+.clients__link {
+	@include flexCentered();
+
+	width: 170px;
+	height: 92px;
+	fill: $main-icon-color;
+	border: 1px solid #afb1b8;
+	border-radius: 4px;
+
+	transition-property: fill, border;
+	transition-duration: $trans-duration;
+	transition-timing-function: $trans-timing-function;
+
+	&:hover,
+	&:focus {
+		border: 1px solid $accent-color;
+		fill: $accent-color;
+	}
+}

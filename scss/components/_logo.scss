@@ -1,0 +1,14 @@
+%logo {
+	font-family: "Raleway";
+	@include text(700, 26px, 31px, 0.03em);
+	color: $accent-color;
+	
+}
+
+.header__logo--black {
+	color: $primary-text-color;
+}
+
+.footer__logo--white {
+	color: $primary-bg-color;
+}

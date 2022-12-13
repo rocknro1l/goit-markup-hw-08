@@ -1,0 +1,52 @@
+.benefits{
+	@extend %section;
+	padding-bottom: 0px;
+}
+
+.benefits__flex {
+	@extend %list;
+  display: flex;
+  justify-content: space-between;
+}
+
+.benefits__post {
+  margin-right: 30px;
+	&:last-child {
+  margin-right: 0px;
+}
+}
+
+.benegits__card {
+  display: block;
+  background-color: $button-bg-color;
+  height: 120px;
+  width: 270px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.benefits__icon {
+  margin: 25px 100px;
+}
+
+.benefits__title {
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: $primary-text-color;
+
+  margin-bottom: 10px;
+}
+
+.benefits__text {
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: $secondary-text-color;
+
+  margin-bottom: 0;
+}
+
+
+
