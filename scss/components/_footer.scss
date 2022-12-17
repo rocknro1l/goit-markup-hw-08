@@ -2,11 +2,48 @@ footer {
 	background-color: $secondary-bg-color;
 }
 
+.footer-flex {
+	@extend %section;
+	@media screen and (min-width: 768px) {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	@media screen and (min-width: 1200px) {
+		display: flex;
+	}
+}
+
+.footer__contact {
+	@media screen and (min-width: 768px) and (max-width: 1199px) {
+		flex: 0 1 50%;
+		margin-bottom: 60px;
+	}
+	@media screen and (max-width: 1199px) {
+		@include flexCentered();
+		flex-direction: column;
+	}
+}
+
 .footer__logo {
 	@extend %logo;
 	display: inline-block;
 	margin-bottom: 20px;
-	padding-top: 60px;
+	@media screen and (min-width: 1200px) {
+		padding-top: 60px;
+	}
+}
+
+.footer__info {
+	@extend %list;
+	text-align: center;
+
+	@media screen and (max-width: 767px) {
+		margin-bottom: 60px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		text-align: left;
+	}
 }
 
 .footer__address {
@@ -42,18 +79,24 @@ footer {
 
 .footer__title {
 	margin-bottom: 20px;
-
+	text-align: center;
 	color: $primary-bg-color;
 	text-transform: uppercase;
 	@include text(700, 14px, 16px, 0.03em);
 }
 
-.footer-flex {
-	display: flex;
-}
-
 .footer__social {
-	margin: 72px 93px 100px 70px;
+	@media screen and (min-width: 768px) and (max-width: 1199px) {
+		flex: 0 1 50%;
+		margin-bottom: 102px;
+	}
+	@media screen and (max-width: 1199px) {
+		@include flexCentered();
+		flex-direction: column;
+	}
+	@media screen and (min-width: 1200px) {
+		margin: 72px 93px 100px 70px;
+	}
 }
 
 .footer__social-list {
@@ -90,27 +133,46 @@ footer {
 }
 
 .subscription {
-	margin-top: 72px;
+	@media screen and (max-width: 767px) {
+		margin-top: 60px;
+	}
+	@media screen and (min-width: 768px) and (max-width: 1199px) {
+		flex: 0 1 100%;
+	}
+
+	@media screen and (min-width: 1200px) {
+		margin-top: 72px;
+	}
 }
 
 .subscription__title {
 	margin-bottom: 20px;
-
 	color: $primary-bg-color;
 	text-transform: uppercase;
 	@include text(700, 14px, 16px, 0.03em);
+	@media screen and (max-width: 1199px) {
+		text-align: center;
+	}
 }
 
 .subscription__flex {
-	@include flexCentered();
+	@media screen and (max-width: 1199px) {
+		@include flexCentered();
+		flex-direction: column;
+	}
+	@media screen and (min-width: 1200px) {
+		display: flex;
+	}
 }
 
 .subscription__input {
-	margin-right: 12px;
+	display: block;
+	width: 100%;
+	margin-bottom: 20px;
 	padding: 0;
 
 	color: #fff;
-	width: 358px;
+	//?? width: 358px;
 	height: 50px;
 	background-color: #2f303a;
 	border: 1px solid rgba(255, 255, 255, 0.3);
@@ -120,6 +182,12 @@ footer {
 	&::placeholder {
 		padding-left: 20px;
 		color: rgba(255, 255, 255, 0.6);
+	}
+
+	@media screen and (min-width: 1200px) {
+		margin-right: 12px;
+		padding: 0;
+		width: 358px;
 	}
 }
 

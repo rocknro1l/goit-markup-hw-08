@@ -3,3 +3,7 @@ body {
   background-color: $primary-bg-color;
   color: $primary-text-color;
 }
+
+body.modal-open {
+	overflow: hidden;
+}

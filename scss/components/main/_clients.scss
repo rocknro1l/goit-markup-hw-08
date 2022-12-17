@@ -4,20 +4,49 @@
 
 .clients__title {
 	@extend %title;
+	@media screen and (min-width: 1200px) {
+		font-size: 36px;
+		line-height: 1.2;
+		letter-spacing: 0.03em;
+
+		text-align: center;
+		margin-bottom: 50px;
+	}
 }
 
 .clients__list {
-	@include flexCentered();
 	@extend %list;
+
+	@media screen and (max-width: 767px) {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 30px;
+	}
+	@media screen and (min-width: 767px) {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 30px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		@include flexCentered();
+	}
 }
 
-.clients__card + .clients__card {
-	margin-left: 30px;
+.clients__card {
+	width: calc((100% - 30px) / 2);
+	
+	@media screen and (min-width: 768px) {
+		width: 226px;
+	}
+	@media screen and (min-width: 1200px) {
+		width: 170px;
+	}
 }
+
 .clients__link {
 	@include flexCentered();
 
-	width: 170px;
 	height: 92px;
 	fill: $main-icon-color;
 	border: 1px solid #afb1b8;

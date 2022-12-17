@@ -15,12 +15,12 @@
 </head>
 
 <body>
-	<!-- Head -->
 	<header class="header">
-		<div class="container main-nav">
-			<!-- Site nav -->
+		<div class="container all-nav">
 			<nav class="main-nav">
+
 				<a class="header__logo" href="/index.html">Web<span class="header__logo--black">Studio</span></a>
+
 				<ul class="site-nav">
 					<li class="site-nav__item">
 						<a href="./index.html" class="site-nav__link current">Студія</a>
@@ -34,7 +34,6 @@
 				</ul>
 			</nav>
 
-			<!-- Site info -->
 			<ul class="site-info">
 				<li class="site-info__item">
 					<a href="mailto:info@devstudio.com" class="site-info__link">
@@ -50,11 +49,55 @@
 						</svg><span>+38 096 111 11 11</span></a>
 				</li>
 			</ul>
+
+			<button class="burger" type="button" aria-expanded="false" aria-controls="burger-menu" data-menu-button>
+				<svg width="40" height="40" aria-label="Меню бургер">
+					<use class="burger__icon" href="./images/symbol-defs.svg#icon-buger_40px"></use>
+					<use class="burger__icon--cross" href="./images/symbol-defs.svg#icon-close_40px"></use>
+				</svg>
+			</button>
+
+			<div class="burger__menu" id="burger-menu" data-menu>
+
+				<ul class="burger-nav">
+					<li class="burger__item">
+						<a href="./index.html" class="burger__link current">Студія</a>
+					</li>
+					<li class="burger__item">
+						<a href="./portfolio.html" class="burger__link">Портфоліо</a>
+					</li>
+					<li class="burger__item">
+						<a href="#" class="burger__link">Контакти</a>
+					</li>
+				</ul>
+
+				<ul class="burger-info">
+					<li class="burger-info__item">
+						<a href="tel:+380961111111" class="burger-info__tel">
+							<span>+38 096 111 11 11</span></a>
+					</li>
+					<li class="burger-info__item">
+						<a href="mailto:info@devstudio.com" class="burger-info__link">
+							<span>info@devstudio.com</span></a>
+					</li>
+				</ul>
+
+				<ul class="burger__social-list">
+					<li class="burger__social-item"><a class="burger__social-link" href="https://www.instagram.com"
+							target="_blank">Instagram</a></li>
+					<li class="burger__social-item"><a class="burger__social-link" href="https://twitter.com"
+							target="_blank">Twitter</a></li>
+					<li class="burger__social-item"><a class="burger__social-link" href="https://www.facebook.com/"
+							target="_blank">Facebook</a></li>
+					<li class="burger__social-item"><a class="burger__social-link" href="https://www.linkedin.com/"
+							target="_blank">LinkedIn</a></li>
+				</ul>
+			</div>
+
 		</div>
 	</header>
 
-	<!-- Main -->
-	<main class="main">
+	<main>
 		<!-- Hero -->
 		<section class="hero">
 			<div class="container">
@@ -62,7 +105,7 @@
 				<button class="hero__button" type="button" data-modal-open>
 					<span class="hero__button-text">Замовити послугу</span>
 				</button>
-				<!-- Modal window -->
+
 				<div class="backdrop is-hidden" data-modal>
 					<div class="modal">
 						<p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
@@ -117,13 +160,14 @@
 				</div>
 			</div>
 		</section>
+
 		<!-- Benefits -->
 		<section class="benefits">
 			<div class="container">
 				<h2 class="visually-hidden">Наші переваги</h2>
 				<ul class="benefits__flex">
 					<li class="benefits__post">
-						<div class="benegits__card">
+						<div class="benefits__card">
 							<svg class="benefits__icon" width="70" height="70">
 								<use href="./images/symbol-defs.svg#icon-antenna"></use>
 							</svg>
@@ -135,7 +179,7 @@
 						</p>
 					</li>
 					<li class="benefits__post">
-						<div class="benegits__card">
+						<div class="benefits__card">
 							<svg class="benefits__icon" width="70" height="70">
 								<use href="./images/symbol-defs.svg#icon-clock"></use>
 							</svg>
@@ -147,7 +191,7 @@
 						</p>
 					</li>
 					<li class="benefits__post">
-						<div class="benegits__card">
+						<div class="benefits__card">
 							<svg class="benefits__icon" width="70" height="70">
 								<use href="./images/symbol-defs.svg#icon-diagram"></use>
 							</svg>
@@ -158,7 +202,7 @@
 						</p>
 					</li>
 					<li class="benefits__post">
-						<div class="benegits__card">
+						<div class="benefits__card">
 							<svg class="benefits__icon" width="70" height="70">
 								<use href="./images/symbol-defs.svg#icon-astronaut"></use>
 							</svg>
@@ -179,16 +223,18 @@
 				<h2 class="job__title">Чим ми займаємося</h2>
 				<ul class="job__examples">
 					<li class="job__photos">
-						<img src="./images/main/img.jpg" width="370" height="294" alt="Людина друкує текст" />
+						<img srcset="./images/main/img.jpg 1x, ./images/main/imgx2.jpg 2x" src="./images/main/img.jpg"
+							alt="Людина друкує текст" />
 						<h3 class="job__text">Десктопні додатки</h3>
 					</li>
 					<li class="job__photos">
-						<img src="./images/main/img1.jpg" width="370" height="294"
-							alt="Людина працює за комп'ютером та телефоном" />
+						<img srcset="./images/main/img1.jpg 1x, ./images/main/img1x2.jpg 2x" src="./images/main/img1.jpg"
+							width="370" height="294" alt="Людина працює за комп'ютером та телефоном" />
 						<h3 class="job__text">Мобільні додатки</h3>
 					</li>
 					<li class="job__photos">
-						<img src="./images/main/img2.jpg" width="370" height="294" alt="Людина працює за планшетом" />
+						<img srcset="./images/main/img2.jpg 1x, ./images/main/img2x2.jpg 2x" src="./images/main/img2.jpg"
+							width="370" height="294" alt="Людина працює за планшетом" />
 						<h3 class="job__text">Дизайнерські рішення</h3>
 					</li>
 				</ul>
@@ -202,7 +248,18 @@
 				<ul class="team__post">
 
 					<li class="team__card">
-						<img src="./images/main/img3.jpg" width="270" height="260" alt="Перший член команди" class="team__photo" />
+
+						<picture>
+							<source srcset="./images/main/crew1.jpg 1x, ./images/main/crew1-2x.jpg 2x" media="(min-width: 1200px)" />
+							<source srcset="./images/main/crew1-tab.jpg 1x, ./images/main/crew1-tab-2x.jpg 2x"
+								media="(min-width: 768px)" />
+							<source srcset="./images/main/crew1-mob.jpg 1x, ./images/main/crew1-mob-2x.jpg 2x"
+								media="(max-width: 767px)" />
+
+							<img srcset="./images/main/crew1.jpg 1x, ./images/main/crew1-2x.jpg 2x" src="./images/main/crew1.jpg"
+								alt="Перший член команди" class="team__photo" />
+						</picture>
+
 						<h3 class="team__name">Ігор Дем'яненко</h3>
 						<p lang="en" class="team__text">Product Designer</p>
 
@@ -239,7 +296,18 @@
 					</li>
 
 					<li class="team__card">
-						<img src="./images/main/img4.jpg" width="270" height="260" alt="Другий член команди" class="team__photo" />
+
+						<picture>
+							<source srcset="./images/main/crew2.jpg 1x, ./images/main/crew2-2x.jpg 2x" media="(min-width: 1200px)" />
+							<source srcset="./images/main/crew2-tab.jpg 1x, ./images/main/crew2-tab-2x.jpg 2x"
+								media="(min-width: 768px)" />
+							<source srcset="./images/main/crew2-mob.jpg 1x, ./images/main/crew2-mob-2x.jpg 2x"
+								media="(max-width: 767px)" />
+
+							<img srcset="./images/main/crew2.jpg 1x, ./images/main/crew2-2x.jpg 2x" src="./images/main/crew1.jpg"
+								alt="лругий член команди" class="team__photo" />
+						</picture>
+
 						<h3 class="team__name">Ольга Рєпіна</h3>
 						<p lang="en" class="team__text">Frontend Developer</p>
 
@@ -276,7 +344,18 @@
 					</li>
 
 					<li class="team__card">
-						<img src="./images/main/img5.jpg" width="270" height="260" alt="Третій член команди" class="team__photo" />
+
+						<picture>
+							<source srcset="./images/main/crew3.jpg 1x, ./images/main/crew3-2x.jpg 2x" media="(min-width: 1200px)" />
+							<source srcset="./images/main/crew3-tab.jpg 1x, ./images/main/crew3-tab-2x.jpg 2x"
+								media="(min-width: 768px)" />
+							<source srcset="./images/main/crew3-mob.jpg 1x, ./images/main/crew3-mob-2x.jpg 2x"
+								media="(max-width: 767px)" />
+
+							<img srcset="./images/main/crew3.jpg 1x, ./images/main/crew3-2x.jpg 2x" src="./images/main/crew3.jpg"
+								alt="Третій член команди" class="team__photo" />
+						</picture>
+
 						<h3 class="team__name">Микола Тарасов</h3>
 						<p lang="en" class="team__text">Marketing</p>
 
@@ -313,8 +392,18 @@
 					</li>
 
 					<li class="team__card">
-						<img src="./images/main/img6.jpg" width="270" height="260" alt="Четвертий член команди"
-							class="team__photo" />
+
+						<picture>
+							<source srcset="./images/main/crew4-mob.jpg 1x, ./images/main/crew4-mob-2x.jpg 2x"
+								media="(max-width: 767px)" />
+							<source srcset="./images/main/crew4-tab.jpg 1x, ./images/main/crew4-tab-2x.jpg 2x"
+								media="(max-width: 1199px)" />
+							<source srcset="./images/main/crew4.jpg 1x, ./images/main/crew4-2x.jpg 2x" media="(min-width: 1200px)" />
+
+							<img srcset="./images/main/crew4.jpg 1x, ./images/main/crew4-2x.jpg 2x" src="./images/main/crew1.jpg"
+								alt="Четвертий член команди" class="team__photo" />
+						</picture>
+
 						<h3 class="team__name">Михайло Єрмаков</h3>
 						<p class="team__text" lang="en">UI Designer</p>
 
@@ -399,10 +488,9 @@
 		</section>
 	</main>
 
-	<!-- Footer -->
 	<footer class="footer">
 		<div class="container footer-flex">
-			<section>
+			<section class="footer__contact">
 				<h2 class="visually-hidden">Контактна інформація</h2>
 				<a class="footer__logo" href="/index.html">Web<span class="footer__logo--white">Studio</span></a>
 				<address>
@@ -471,6 +559,7 @@
 		</div>
 	</footer>
 
+	<script src="./js/burger.js"></script>
 	<script src="./js/modal.js"></script>
 </body>
 

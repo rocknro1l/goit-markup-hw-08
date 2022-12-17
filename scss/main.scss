@@ -6,11 +6,12 @@
 @import "./utils/placeholders";
 
 @import "./components/body";
-@import "./components/container+section";
+@import "./components/container";
 @import "./components/header";
+@import "./components/burger";
 @import "./components/logo";
 @import "./components/main/hero";
-@import "./components/main/modal";
+@import "./components/modal";
 @import "./components/main/benefits";
 @import "./components/main/job";
 @import "./components/main/team";
