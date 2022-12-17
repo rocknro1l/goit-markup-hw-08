@@ -578,7 +578,7 @@ body.modal-open {
 
 .hero {
   background-color: var(--secondary-bg-color);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../../images/background.jpg");
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/background.jpg);
   padding: 200px 0;
   margin: auto;
   background-position: center;
