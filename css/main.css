@@ -453,7 +453,7 @@ body.modal-open {
 }
 
 .burger {
-  display: inline-flex;
+  display: flex;
   margin: 0;
   padding: 0;
   background-color: transparent;
@@ -490,6 +490,7 @@ body.modal-open {
     height: 746px;
   }
   .burger__menu.is-open {
+    position: absolute;
     display: block;
   }
 }

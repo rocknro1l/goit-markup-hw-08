@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<header class="header">
+	<div class="container">
+
+		<a class="logo" href="#">
+			<svg width="40" height="37">
+				<use href="./images/symbol-defs.svg#icon-logo-mob"></use>
+			</svg></a>
+
+		<nav class="nav">
+			<ul class="nav__list">
+				<li class="nav__item">Home</li>
+				<li class="nav__item">How it’s made?</li>
+				<li class="nav__item">Our products</li>
+				<li class="nav__item">Contact</li>
+			</ul>
+		</nav>
+
+
+		<div class="burger">
+			<button class="burger__button" type="button" aria-expanded="false" aria-controls="burger" data-menu-button>
+				<svg width="32" height="32" aria-label="Меню бургер">
+					<use class="burger__icon" href="./images/symbol-defs.svg#icon-burger"></use>
+					<use class="burger__icon--close" href="./images/symbol-defs.svg#icon-burger-close"></use>
+				</svg>
+			</button>
+
+			<div class="burger__menu" id="burger" data-menu>
+				<ul class="burger__list">
+					<li class="burger__item">Home</li>
+					<li class="burger__item">How it’s made?</li>
+					<li class="burger__item">Our products</li>
+					<li class="burger__item">Contact</li>
+				</ul>
+
+				<button class="burger__order" type="button">
+					<span>Buy now</span>
+				</button>
+
+			</div>
+		</div>
+
+
+	</div>
+</header>
